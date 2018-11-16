@@ -9,9 +9,10 @@ foundations-of-programming
 
 メトロネットワークデータ (`metro.ml`) は下記サポートページからダウンロードする必要があります。
 http://pllab.is.ocha.ac.jp/~asai/book/Metro.html
-*ただし, 文字コードがEUC-JPなのでUTF-8に変換する必要があります*
 
-もし make, curl, iconv が使えるなら下記コマンドで UTF-8 に変換後の `metro.ml` が取得できます。
+*ただし, 文字コードが EUC-JP なので UTF-8 に変換する必要があります*
 
-  $ make metro.ml
+もし make、curl、iconv が使えるなら、下記コマンドで UTF-8 に変換後の `metro.ml` が取得できます。
+
+    $ make metro.ml
 
