@@ -10,14 +10,10 @@ let hanbetsushiki a b c =
 let kyosuukai a b c =
   hanbetsushiki a b c < 0.
 
+(* テスト *)
 let () =
-  let println_bool x = print_endline (string_of_bool x) in
-  (* テスト *)
-  let test1 = kyosuukai 2. 3. (-1.) = false in
-  let test2 = kyosuukai 2. 4. 2. = false in
-  let test3 = kyosuukai 4. 2. 1. = true in
-  println_bool test1;
-  println_bool test2;
-  println_bool test3;
+  assert (kyosuukai 2. 3. (-1.) = false);
+  assert (kyosuukai 2. 4. 2. = false);
+  assert (kyosuukai 4. 2. 1. = true);
   ()
 

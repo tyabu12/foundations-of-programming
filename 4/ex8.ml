@@ -5,14 +5,10 @@ open Printf
 let tsurukame n m =
   (4 * n - m) / 2
 
+(* テスト *)
 let () =
-  let println_bool x = print_endline (string_of_bool x) in
-  (* テスト *)
-  let test1 = tsurukame 2 6 = 1 in
-  let test2 = tsurukame 5 14 = 3 in
-  let test3 = tsurukame 12 32 = 8 in
-  println_bool test1;
-  println_bool test2;
-  println_bool test3;
+  assert (tsurukame 2 6 = 1);
+  assert (tsurukame 5 14 = 3);
+  assert (tsurukame 12 32 = 8);
   ()
 

@@ -29,16 +29,11 @@ let seiza m d =
   else if in_range m d 12 22  1 19 then "やぎ座"
   else "不明"
 
+(* テスト *)
 let () =
-  let println_bool x = print_endline (string_of_bool x) in
-  (* テスト *)
-  let test1 = seiza 1 1 = "やぎ座" in
-  let test2 = seiza 3 6 = "うお座" in
-  let test3 = seiza 12 3 = "いて座" in
-  let test4 = seiza 8 18 = "しし座" in
-  println_bool test1;
-  println_bool test2;
-  println_bool test3;
-  println_bool test4;
+  assert (seiza 1 1 = "やぎ座");
+  assert (seiza 3 6 = "うお座");
+  assert (seiza 12 3 = "いて座");
+  assert (seiza 8 18 = "しし座");
   ()
 

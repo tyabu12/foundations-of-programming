@@ -4,9 +4,8 @@ let bmi h w =
   w /. (h ** 2.)
 
 let () =
-  let println_float x = print_endline (string_of_float x) in
-  println_float (bmi 1.58 55.);
-  println_float (bmi 1.68 55.);
-  println_float (bmi 1.78 55.);
+  assert (int_of_float ((bmi 1.58 55.) *. 100.) = 2203);
+  assert (int_of_float ((bmi 1.68 55.) *. 100.) = 1948);
+  assert (int_of_float ((bmi 1.78 55.) *. 100.) = 1735);
   ()
 

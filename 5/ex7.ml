@@ -14,10 +14,10 @@ let taikei h w =
   else if t < 30. then "肥満"
   else "高度肥満"
 
+(* テスト *)
 let () =
-  let println_bool x = print_endline (string_of_bool x) in
-  println_bool ((taikei 1.58 55.) = "標準");
-  println_bool ((taikei 1.68 55.) = "標準");
-  println_bool ((taikei 1.78 55.) = "やせ");
+  assert ((taikei 1.58 55.) = "標準");
+  assert ((taikei 1.68 55.) = "標準");
+  assert ((taikei 1.78 55.) = "やせ");
   ()
 

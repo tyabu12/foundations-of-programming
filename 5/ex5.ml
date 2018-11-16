@@ -13,14 +13,10 @@ let kai_no_kosuu a b c =
   else if d = 0. then 1
   else 0
 
+(* テスト *)
 let () =
-  let println_bool x = print_endline (string_of_bool x) in
-  (* テスト *)
-  let test1 = kai_no_kosuu 2. 3. (-1.) = 2 in
-  let test2 = kai_no_kosuu 2. 4. 2. = 1 in
-  let test3 = kai_no_kosuu 4. 2. 1. = 0 in
-  println_bool test1;
-  println_bool test2;
-  println_bool test3;
+  assert (kai_no_kosuu 2. 3. (-1.) = 2);
+  assert (kai_no_kosuu 2. 4. 2. = 1);
+  assert (kai_no_kosuu 4. 2. 1. = 0);
   ()
 

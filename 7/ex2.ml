@@ -5,14 +5,10 @@ open Printf
 let seiseki name score =
   name ^ "さんの評価は" ^ score ^ "です"
 
+(* テスト *)
 let () =
-  let println_bool x = print_endline (string_of_bool x) in
-  (* テスト *)
-  let test1 = seiseki "田中" "優" = "田中さんの評価は優です" in
-  let test2 = seiseki "鈴木" "良" = "鈴木さんの評価は良です" in
-  let test3 = seiseki "山本" "可" = "山本さんの評価は可です" in
-  println_bool test1;
-  println_bool test2;
-  println_bool test3;
+  assert (seiseki "田中" "優" = "田中さんの評価は優です");
+  assert (seiseki "鈴木" "良" = "鈴木さんの評価は良です");
+  assert (seiseki "山本" "可" = "山本さんの評価は可です");
   ()
 

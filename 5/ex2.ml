@@ -6,16 +6,11 @@ let jikan h =
   if h < 12 then "午前"
             else "午後"
 
+(* テスト *)
 let () =
-  let println_bool x = print_endline (string_of_bool x) in
-  (* テスト *)
-  let test1 = jikan 0 = "午前" in
-  let test2 = jikan 6 = "午前" in
-  let test3 = jikan 12 = "午後" in
-  let test4 = jikan 18 = "午後" in
-  println_bool test1;
-  println_bool test2;
-  println_bool test3;
-  println_bool test4;
+  assert (jikan 0 = "午前");
+  assert (jikan 6 = "午前");
+  assert (jikan 12 = "午後");
+  assert (jikan 18 = "午後");
   ()
 
