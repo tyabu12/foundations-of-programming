@@ -28,6 +28,7 @@ let seiza m d =
   else "不明"
 
 type person_t = {
+  name : string;       (* 名前 *)
   height : int;        (* 身長(m) *)
   weight : int;        (* 体重(kg) *)
   birth_month : int;   (* 誕生月 *)
@@ -39,16 +40,16 @@ type person_t = {
 (* otomeza : person_t list -> string list *)
 let rec otomeza l = match l with
     [] -> []
-  | ({height = h; weight = w; birth_month = bm; birth_day = bd; blood_type = bt} as hd) :: tl
+  | ({name = n; height = h; weight = w; birth_month = bm; birth_day = bd; blood_type = bt} as hd) :: tl
      -> if seiza bm bd = "乙女座" then hd :: otomeza tl
                                   else otomeza tl
 
 (* テスト *)
 let () =
-  let p1 = {height = 172; weight = 66; birth_month = 4; birth_day = 2; blood_type = "B"} in
-  let p2 = {height = 182; weight = 76; birth_month = 8; birth_day = 25; blood_type = "A"} in
-  let p3 = {height = 152; weight = 56; birth_month = 10; birth_day = 8; blood_type = "AB"} in
-  let p4 = {height = 164; weight = 60; birth_month = 9; birth_day = 12; blood_type = "A"} in
+  let p1 = {name = "Jack"; height = 172; weight = 66; birth_month = 4; birth_day = 2; blood_type = "B"} in
+  let p2 = {name = "Kevin"; height = 182; weight = 76; birth_month = 8; birth_day = 25; blood_type = "A"} in
+  let p3 = {name = "Taro"; height = 152; weight = 56; birth_month = 10; birth_day = 8; blood_type = "AB"} in
+  let p4 = {name = "Kate"; height = 164; weight = 60; birth_month = 9; birth_day = 12; blood_type = "A"} in
   assert (otomeza [] = []);
   assert (otomeza [p2] = [p2]);
   assert (otomeza [p1; p2] = [p2]);
