@@ -8,5 +8,4 @@ install:
   - wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-ocaml.sh
   - bash -ex .travis-ocaml.sh
 
-script:
-  - bash -ex run_tests.sh
+script: make test
