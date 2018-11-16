@@ -1,5 +1,3 @@
-open Printf
-
 (* 鶴と亀の数の合計nと足の数の合計mに応じた鶴の数を計算する *)
 (* int -> int -> int *)
 let tsurukame n m =

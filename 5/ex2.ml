@@ -1,5 +1,3 @@
-open Printf
-
 (* 目的: 受け取った時間 h に応じて午前か午後を計算する *)
 (* int -> string *)
 let jikan h =

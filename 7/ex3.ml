@@ -1,5 +1,3 @@
-open Printf
-
 (* 目的: 平面座標 xy に応じた x 軸に対称な点の座標を返す *)
 (* taisho_x: float * float -> float * float *)
 let taisho_x xy = match xy with

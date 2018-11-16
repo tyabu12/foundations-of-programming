@@ -1,5 +1,3 @@
-open Printf
-
 (* 目的: 五教科の点数 s1 s2 s3 s4 s5 に応じた合計点と平均点を計算する *)
 (* int -> int -> int -> int -> int -> int * int *)
 let goukei_to_heikin s1 s2 s3 s4 s5 =

@@ -1,5 +1,3 @@
-open Printf
-
 let bmi h w =
   w /. (h ** 2.)
 

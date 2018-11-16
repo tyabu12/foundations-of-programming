@@ -1,5 +1,3 @@
-open Printf
-
 let jikoshokai name =
   "はじめまして。" ^ name ^ "といいます。よろしくお願いします！"
 

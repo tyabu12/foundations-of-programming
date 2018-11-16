@@ -1,5 +1,3 @@
-open Printf
-
 (* 目的: 名前 name と成績 score の組に応じて文字列を返す*)
 (* string * string -> string *)
 let seiseki name score =

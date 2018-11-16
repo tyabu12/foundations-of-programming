@@ -1,5 +1,3 @@
-open Printf
-
 let baito_kyuyo y h =
   (850 + (y * 100))
 

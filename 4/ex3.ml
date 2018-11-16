@@ -1,5 +1,3 @@
-open Printf
-
 let hyojun_taiju h =
   h ** 2. *. 22.
 

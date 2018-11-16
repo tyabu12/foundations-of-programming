@@ -1,5 +1,3 @@
-open Printf
-
 (* 目的: m/d が sm/sd ~ em/ed の期間内かを計算する *)
 (* int -> int -> int -> int -> int -> int -> bool *)
 let in_range m d sm sd em ed =

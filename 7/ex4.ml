@@ -1,5 +1,3 @@
-open Printf
-
 (* 目的: 平面座標 xy1, xy2 の中点座標を返す *)
 (* chuten: float * float -> float * float -> float * float *)
 let chuten xy1 xy2 = match xy1, xy2 with
