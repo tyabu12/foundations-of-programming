@@ -1,12 +1,21 @@
+SRC=$(shell find . -type f -name "ex*.ml" | sort)
+
 .PHONY: all
-all: test
+all: build
+
+.PHONY: build
+build: a.out
 
 .PHONY: test
-test: metro.ml
-	./run_tests.sh
+test: build
+	./a.out
 
 metro.ml:
-	curl -s http://pllab.is.ocha.ac.jp/~asai/book-data/metro.ml | iconv -f EUC-JP -t UTF-8 > metro.ml
+	curl -s http://pllab.is.ocha.ac.jp/~asai/book-data/metro.ml \
+		| iconv -f EUC-JP -t UTF-8 > metro.ml
+
+a.out: metro.ml
+	ocamlc -o a.out metro.ml ${SRC}
 
 .PHONY: clean
 clean:
