@@ -1,4 +1,6 @@
-SRC=$(shell find . -type f -name "ex*.ml" | sort)
+SRC = gakusei.ml person.ml metro.ml
+SRC += $(shell find . -type f -name "ex*.ml" | sort)
+
 INCLUDES=$(shell find . -type d -name '.git' -prune -o -type d -print)
 
 .PHONY: all
@@ -16,7 +18,7 @@ metro.ml:
 		| iconv -f EUC-JP -t UTF-8 > metro.ml
 
 a.out: metro.ml
-	ocamlc -o a.out $(addprefix -I ,$(INCLUDES)) metro.ml ${SRC}
+	ocamlc -o a.out $(addprefix -I ,$(INCLUDES)) ${SRC}
 
 .PHONY: clean
 clean:

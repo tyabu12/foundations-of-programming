@@ -1,8 +1,4 @@
-type gakusei_t = {
-  namae : string;   (* 名前 *)
-  tensuu : int;     (* 点数 *)
-  seiseki : string; (* 成績 *)
-}
+open Gakusei
 
 (* 目的: gakusei_t 型のリストを受け取り tensuu フィールドのレコード返す *)
 (* gakusei_max : gakusei_t list -> gakusei_t*)

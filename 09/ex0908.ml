@@ -1,3 +1,5 @@
+open Person
+
 (* 目的: m/d が sm/sd ~ em/ed の期間内かを計算する *)
 (* int -> int -> int -> int -> int -> int -> bool *)
 let in_range m d sm sd em ed =
@@ -26,15 +28,6 @@ let seiza m d =
   else if in_range m d 11 23 12 21 then "射手座"
   else if in_range m d 12 22  1 19 then "山羊座"
   else "不明"
-
-type person_t = {
-  name : string;       (* 名前 *)
-  height : int;        (* 身長(m) *)
-  weight : int;        (* 体重(kg) *)
-  birth_month : int;   (* 誕生月 *)
-  birth_day : int;     (* 誕生日 *)
-  blood_type : string; (* 血液型 *)
-}
 
 (* 目的: person_t 型のリストから乙女座の人の名前からなるリストを返す *)
 (* otomeza : person_t list -> string list *)
