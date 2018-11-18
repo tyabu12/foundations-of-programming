@@ -1,7 +1,4 @@
-(* 鶴の数nに応じた足の本数を計算する *)
-(* int -> int *)
-let tsuru_no_ashi n =
-  n * 2
+open Ex0406
 
 (* 亀の数nに応じた足の本数を計算する *)
 (* int -> int *)

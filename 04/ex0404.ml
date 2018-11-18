@@ -1,3 +1,5 @@
+(* 目的: 身長 h と体重 w に応じて BMI を計算する *)
+(* float -> float -> float *)
 let bmi h w =
   w /. (h ** 2.)
 

@@ -1,25 +1,7 @@
 open Printf
 open Metro
-
-(* 目的: ローマ字駅名 romaji_namae と駅名リスト ekimei_list を受け取り,
-        その駅の漢字表記を返す *)
-(* romaji_to_kanji : string -> ekimei_t list -> string *)
-let rec romaji_to_kanji romaji_namae ekimei_list = match ekimei_list with
-  | [] -> ""
-  | hd :: tl -> if hd.romaji = romaji_namae then hd.kanji
-                                            else romaji_to_kanji romaji_namae tl
-
-(* 目的: 漢字の駅名 namae1, namae2 と駅間リスト ekikan_list を
- *       受け取り, 駅間リストの中から二駅間の距離を返す *)
-(* get_ekikan_kyori : string -> string -> ekikan_t list -> float *)
-let rec get_ekikan_kyori namae1 namae2 ekikan_list = match ekikan_list with
-  | [] -> infinity
-  | {kiten=kiten; shuten=shuten; kyori=kyori} :: tl
-     -> if (kiten = namae1 && shuten = namae2)
-          || (kiten = namae2 && shuten = namae1) then
-          kyori
-        else
-          get_ekikan_kyori namae1 namae2 tl
+open Ex1010
+open Ex1011
 
 (* 目的: ローマ字の駅名 namae1, namae2 を受け取り,
  *       直接つながっている場合は文字列「A駅からB駅までは?kmです」を,

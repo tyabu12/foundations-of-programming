@@ -1,24 +1,4 @@
-type person_t = {
-  name : string;       (* 名前 *)
-  height : int;        (* 身長(m) *)
-  weight : int;        (* 体重(kg) *)
-  birth_month : int;   (* 誕生月 *)
-  birth_day : int;     (* 誕生日 *)
-  blood_type : string; (* 血液型 *)
-}
-
-(* 目的: person_t 型のリストを受け取り各血液型の人が何人いるかを組にしてを返す *)
-(* ketsueki_shukei : person_t list -> person_t list *)
-let rec ketsueki_shukei l = match l with
-    [] -> (0, 0, 0, 0)
-  | {name = n; height = h; weight = w; birth_month = bm; birth_day = bd; blood_type = bt} :: tl
-     -> match ketsueki_shukei tl with
-        (a, b, o, ab) -> match bt with
-                           "A" -> (a + 1, b, o, ab)
-                         | "B" -> (a, b + 1, o, ab)
-                         | "O" -> (a, b, o + 1, ab)
-                         | "AB" -> (a, b, o, ab + 1)
-                         | _ -> (a, b, o, ab)
+open Ex1007
 
 (* 目的: person_t 型のリストを受け取り最も血液型を返す *)
 (* saita_ketsueki : person_t list -> string *)

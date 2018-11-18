@@ -1,9 +1,4 @@
-(* 目的: 昇順の整数リスト l に昇順を崩さず整数 n を挿入したリストを返す *)
-(* insert : int list -> int -> int list *)
-let rec insert l n = match l with
-    [] -> [n]
-  | hd :: tl -> if hd >= n then n :: hd :: tl
-                           else hd :: (insert tl n)
+open Ex1001
 
 (* 目的: 整数リスト l を昇順に整列したリストを返す *)
 (* ins_sort : int list -> int list *)

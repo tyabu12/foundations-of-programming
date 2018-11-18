@@ -7,8 +7,10 @@ let rec get_ekikan_kyori namae1 namae2 ekikan_list = match ekikan_list with
   | [] -> infinity
   | {kiten=kiten; shuten=shuten; kyori=kyori} :: tl
      -> if (kiten = namae1 && shuten = namae2)
-          || (kiten = namae2 && shuten = namae1) then kyori
-        else get_ekikan_kyori namae1 namae2 tl
+          || (kiten = namae2 && shuten = namae1) then
+          kyori
+        else
+          get_ekikan_kyori namae1 namae2 tl
 
 (* テスト *)
 let () =
