@@ -1,5 +1,5 @@
 open Metro
-open Ex1201
+open Ex1201 (* eki_t *)
 
 (* 目的: ekimei_t list を受け取り, その駅名に応じた eki_t list を返す *)
 (* make_eki_list :ekimei_t list -> eki_t list *)

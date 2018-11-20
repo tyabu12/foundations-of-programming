@@ -1,5 +1,5 @@
 open Metro
-open Ex1201
+open Ex1201 (* eki_t *)
 
 (* 目的: ekimei_t list と漢字の駅名 shiten_namae を受け取り,
  *       その駅名に応じた eki_t list を返す *)
