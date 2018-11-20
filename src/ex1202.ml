@@ -1,10 +1,5 @@
 open Metro
-
-type eki_t = {
-  namae : string;           (* 漢字の駅名 *)
-  saitan_kyori : float;     (* 最短距離 *)
-  temae_list : string list; (* 漢字の駅名リスト *)
-}
+open Ex1201
 
 (* 目的: ekimei_t list を受け取り, その駅名に応じた eki_t list を返す *)
 (* make_eki_list :ekimei_t list -> eki_t list *)

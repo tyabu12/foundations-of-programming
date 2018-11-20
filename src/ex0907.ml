@@ -1,4 +1,4 @@
-open Person
+open Ex0803
 
 (* 目的: person_t 型のリストから血液型がA型の人の数を返す *)
 (* count_ketsueki_A : person_t list -> int *)

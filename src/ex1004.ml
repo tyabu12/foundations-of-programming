@@ -1,4 +1,4 @@
-open Person
+open Ex0803
 
 (* 目的: person_t 型のリストを受け取り name フィールド順のリストを返す *)
 (* person_sort : person_t list -> person_t list *)

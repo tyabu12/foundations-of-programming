@@ -1,4 +1,4 @@
-open Person
+open Ex0803
 
 (* 目的: m/d が sm/sd ~ em/ed の期間内かを計算する *)
 (* int -> int -> int -> int -> int -> int -> bool *)
