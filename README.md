@@ -1,5 +1,4 @@
-foundations-of-programming
-===
+# foundations-of-programming
 
 [![Build Status](https://travis-ci.org/tyabu12/foundations-of-programming.svg?branch=master)](https://travis-ci.org/tyabu12/foundations-of-programming)
 
@@ -7,13 +6,13 @@ foundations-of-programming
 
 ## メトロネットワークデータ
 
-メトロネットワークデータ (`metro.ml`) は下記サポートページからダウンロードする必要があります。
+メトロネットワークデータ (`metro.ml`) は下記サポートページからダウンロードできる。
 
-http://pllab.is.ocha.ac.jp/~asai/book/Metro.html
+<http://pllab.is.ocha.ac.jp/~asai/book/Metro.html>
 
-**ただし、文字コードが EUC-JP なので UTF-8 に変換する必要があります。**
+ただし、**文字コードが EUC-JP なので UTF-8 に変換**する必要がある。
 
-もし make、curl、iconv が使えるなら、下記コマンドで UTF-8 に変換後の `metro.ml` が取得できます。
+make、curl、iconv が使えるなら、下記コマンドで UTF-8 に変換後の `metro.ml` が取得できる。
 
-    $ make metro.ml
+    $ make src/metro.ml
 
