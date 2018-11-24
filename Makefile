@@ -15,7 +15,7 @@ src/metro.ml:
 	curl -s http://pllab.is.ocha.ac.jp/~asai/book-data/metro.ml \
 		| iconv -f EUC-JP -t UTF-8 > src/metro.ml
 
-a.out: src/metro.ml
+a.out: ${SRC}
 	ocamlc -o a.out -I ./src ${SRC}
 
 .PHONY: clean
