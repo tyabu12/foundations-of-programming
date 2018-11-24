@@ -1,17 +1,17 @@
 open Metro
 open Ex1201 (* eki_t *)
 
-(* 目的: ekimei_t list と漢字の駅名 shiten_namae を受け取り,
+(* 目的: eki_t list と漢字の駅名 shiten_namae を受け取り,
  *       その駅名に応じた eki_t list を返す *)
 (* shokika : ekimei_t list -> string -> eki_t list *)
-let rec shokika ekimei_list shiten_namae = match ekimei_list with
+let rec shokika eki_list shiten_namae = match eki_list with
   | [] -> []
-  | {kanji=kanji_namae} :: tl ->
-      (if kanji_namae = shiten_namae then
-         {namae = kanji_namae; saitan_kyori = 0.; temae_list = [shiten_namae]}
+  | hd :: tl ->
+      (if hd.namae = shiten_namae then
+         {namae = hd.namae; saitan_kyori = 0.; temae_list = [shiten_namae]}
        else
-         {namae = kanji_namae; saitan_kyori = infinity; temae_list = []}
-      ) :: shokika tl shiten_namae
+         hd
+      ) :: (shokika tl shiten_namae)
 
 (* テスト *)
 let () =
@@ -26,10 +26,10 @@ let () =
   in
   assert (shokika [] "" = []);
   assert (shokika [] "湯島" = []);
-  assert (shokika [ekimei1] "へのへの" = [eki ekimei1]);
-  assert (shokika [ekimei1] ekimei1.kanji = [shiten_eki ekimei1]);
-  assert (shokika [ekimei1; ekimei2] ekimei2.kanji = [eki ekimei1; shiten_eki ekimei2]);
-  assert (shokika [ekimei1; ekimei2] ekimei2.kanji = [eki ekimei1; shiten_eki ekimei2]);
-  assert (shokika [ekimei1; ekimei2; ekimei3] ekimei2.kanji= [eki ekimei1; shiten_eki ekimei2; eki ekimei3]);
+  assert (shokika [eki ekimei1] "へのへの" = [eki ekimei1]);
+  assert (shokika [eki ekimei1] ekimei1.kanji = [shiten_eki ekimei1]);
+  assert (shokika [eki ekimei1; eki ekimei2] ekimei2.kanji = [eki ekimei1; shiten_eki ekimei2]);
+  assert (shokika [eki ekimei1; eki ekimei2] ekimei2.kanji = [eki ekimei1; shiten_eki ekimei2]);
+  assert (shokika [eki ekimei1; eki ekimei2; eki ekimei3] ekimei2.kanji= [eki ekimei1; shiten_eki ekimei2; eki ekimei3]);
   ()
 
