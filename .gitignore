@@ -23,5 +23,8 @@ setup.log
 # Merlin configuring file for Vim and Emacs
 .merlin
 
+# Executable file
+a.out
+
 # Metro data
 metro.ml
