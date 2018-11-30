@@ -5,7 +5,7 @@ env:
   - OCAML_VERSION=4.07
 
 install:
-  - curl -sL https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-ocaml.sh | bash -ex
+  - curl -sSL https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-ocaml.sh | bash -ex
 
 before_script: make
 script: make test
