@@ -14,7 +14,7 @@ let dijkstra shiten_romaji syuten_romaji =
   let syuten_kanji = romaji_to_kanji syuten_romaji ekimei_lst in
   let v = make_initial_eki_list ekimei_lst shiten_kanji in
   let u = dijkstra_main v global_ekikan_list in
-  List.hd (List.filter (fun eki -> eki.namae = syuten_kanji) u)
+  List.find (fun eki -> eki.namae = syuten_kanji) u
 
 (* テスト *)
 let () =
