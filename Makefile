@@ -1,4 +1,4 @@
-SRC = src/metro.ml src/gakusei.ml
+SRC = src/metro.ml src/gakusei.ml src/checkRaise.ml
 SRC += $(shell find ./src -type f -name "ex*.ml" | sort)
 
 .PHONY: all
