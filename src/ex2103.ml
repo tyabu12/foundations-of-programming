@@ -18,7 +18,7 @@ let main shiten_romaji syuten_romaji =
 let () =
   if Array.length Sys.argv < 3 then (
     print_endline (Sys.argv.(0) ^ " <shiten_romaji> <syuten_romaji>");
-    exit 1
+    (* exit 1 *)
   ) else (
     main Sys.argv.(1) Sys.argv.(2);
     exit 0
