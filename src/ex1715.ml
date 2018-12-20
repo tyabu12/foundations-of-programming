@@ -55,5 +55,5 @@ let () =
   assert (syuten_eki.saitan_kyori = 6.);
   (* リストと木で時間比較 *)
   time (fun _ -> let _ = Ex1605.dijkstra "ikebukuro" "iidabashi" in ()) "dijkstra (List)";
-  time (fun _ -> let _ = dijkstra "ikebukuro" "iidabashi" in ()) "dijkstra (Tree)";
+  time (fun _ -> let _ = dijkstra "ikebukuro" "iidabashi" in ()) "dijkstra (Binary Tree)";
   ()
