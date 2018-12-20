@@ -19,7 +19,7 @@ src/redBlack.cmi:
 	ocamlc -c src/redBlack.mli
 
 a.out: ${SRC} src/redBlack.cmi
-	ocamlc -o a.out -I ./src ${SRC}
+	ocamlc -o $@ -I src ${SRC}
 
 .PHONY: clean
 clean:
