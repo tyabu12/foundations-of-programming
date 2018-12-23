@@ -6,6 +6,7 @@ env:
 
 install:
   - curl -sSL https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-ocaml.sh | bash -ex
+  - eval `opam config env`
   - ocamlc -v
 
 before_script: make
